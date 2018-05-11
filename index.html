@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>project</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script>
+      //px转换rem
+        function adtion(sw) {
+          var w = document.documentElement.clientWidth;
+          var f = w / sw * 100;
+          var bf = 10 / f;
+          document.getElementsByTagName("html")[0].style.fontSize = f + 'px';
+          document.body.style.fontSize = bf + 'rem';
+        };
+        adtion(750);
+        window.onresize = function () {
+          adtion(750);
+        };
+    </script>
+  </body>
+</html>
